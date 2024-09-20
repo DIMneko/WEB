@@ -1,3 +1,23 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  // ルールをまとめて追加
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript",
+    "plugin:storybook/recommended",
+    "prettier"
+  ],
+  // 個別ルール
+  "rules": {
+    // import するファイルをアルファベット順に並べ替える
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ],
+    // import のパスにエイリアス('@/components/xxx')を使うと絵r-ラになるのでそれを防ぐ
+    "import/no-unresolved": "off"
+  }
 }

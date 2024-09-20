@@ -1,0 +1,16 @@
+.page_nation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 0;
+
+    button {
+        padding: 1em;
+    }
+    .PrevPage {
+        margin: 0 auto 0 0;
+    }
+    .NextPage {
+        margin: 0 0 0 auto;
+    }
+}

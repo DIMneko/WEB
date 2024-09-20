@@ -1,0 +1,21 @@
+.Mneko_header {
+    width: 100%;
+    background-color: #ddd;
+    padding: 1em;
+    box-sizing: border-box;
+
+
+    .Mneko_inner {
+        width: clamp( 300px, 96%, 1166px );
+        margin: 0 auto;
+        padding: 1em;
+        box-sizing: border-box;
+        background: #fff;
+    }
+
+    
+
+    h2 {
+        font-size: 1em;
+    }
+}
