@@ -1,5 +1,19 @@
 import "../scss/Books.scss";
 
+// generateStaticParams を追加
+export async function generateStaticParams() {
+  // 本の ID リストを取得するために API を呼び出します
+  const res = await fetch(`http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/posts`);
+  const books = await res.json();
+
+  // 静的に生成する本の ID リストを返す
+  return books.map((book: { id: string }) => ({
+    bookId: book.id,
+  }));
+}
+
+
+
 export default async function BookPage({
   params,
 }: {
@@ -12,7 +26,6 @@ export default async function BookPage({
 
   return (
     <div className="book_page">
-      <p>postIdページになります。ID: {params.bookId}</p>
 
       <article className="book_inner">
         <div className="inner_post" key={book.id}>
@@ -27,3 +40,6 @@ export default async function BookPage({
     </div>
   );
 }
+
+
+
