@@ -31,6 +31,7 @@ const Blog_page = async () => {
     <>
       <div className="coment_type">
         <p>RestAPIを使ったブログ表示に挑戦。</p>
+        
         <p>また、各ページまでも同様に再現する(目標)</p>
       </div>
 
