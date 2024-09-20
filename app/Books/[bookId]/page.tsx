@@ -34,7 +34,12 @@ export default async function BookPage({
   const { bookId } = params;
   // bookIdを使って本の詳細を取得
   const response = await fetch(`http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/posts/${bookId}`);
-  const bookData = await response.json();
+
+  if (!response.ok) {
+    throw new Error('Failed to fetch book details');
+  }
+
+  const bookData:BookProp = await response.json();
 
   return (
     <div className="book_page">
