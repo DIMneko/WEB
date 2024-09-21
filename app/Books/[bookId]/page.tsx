@@ -10,10 +10,25 @@ const RestAPI = "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/posts";
 
 // 静的生成
 export async function generateStaticParams() {
-  const posts = await fetch(RestAPI).then((res) => res.json());
-  return posts.map((post:BookPageProp) => ({
-    bookId: String(post.id),
-  }));
+
+    try {
+        const response = await fetch(RestAPI);
+
+        if (!response.ok){
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const posts = await response.json();
+
+        return posts.map((post:BookPageProp) => ({
+            bookId: String(post.id),
+        }));
+
+
+    } catch (error) {
+        console.error('Error fetching posts', error );
+        return [];
+    }
 }
 
 
