@@ -1,11 +1,14 @@
 "use client";
 
+
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
+import Image from "next/image";
 import { useState } from "react";
 
 import "./scss/Gallery.scss";
 import { DemoGallerys } from "./DemoGallery";
+
 
 export default function Gallery() {
   // 初期ステータス　page1
@@ -40,10 +43,12 @@ export default function Gallery() {
           return (
             <>
               <ImageListItem key={index}>
-                <img
+                <Image
                   srcSet={`${value.URL}?w=200&fit=crop&auto=format&dpr=2 2x`}
                   src={`${value.URL}?w=200&fit=crop&auto=format`}
                   alt={value.label}
+                  width={500}
+                  height={500}
                   loading="lazy"
                 />
               </ImageListItem>

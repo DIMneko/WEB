@@ -21,7 +21,7 @@ export async function generateStaticParams() {
 
     const posts = await response.json();
 
-    return posts.map((post:BookPageProp) => ({
+    return posts.map((post:PostPageProp) => ({
         postId: String(post.id),
     }));
 
