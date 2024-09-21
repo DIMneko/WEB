@@ -44,7 +44,6 @@ export default function Gallery() {
             <>
               <ImageListItem key={index}>
                 <Image
-                  srcSet={`${value.URL}?w=200&fit=crop&auto=format&dpr=2 2x`}
                   src={`${value.URL}?w=200&fit=crop&auto=format`}
                   alt={value.label}
                   width={500}
@@ -56,7 +55,6 @@ export default function Gallery() {
           );
         })}
       </ImageList>
-
       <div className="page_nation">
         {!(currentPage === 1) && (
           <button
