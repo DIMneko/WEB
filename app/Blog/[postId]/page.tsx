@@ -3,15 +3,10 @@ import Not_Image from "../img/image.png";
 import "./scss/post.scss";
 
 
-// interface PostPageProp {
-//   id: number;
-//   title: {
-//     rendered:string;
-//   };
-//   excerpt: {
-//     rendered:string;
-//   };
-// }
+// 静的生成
+export async function generateStaticParams() {
+  return []
+}
 
 
 export default async function PostPage({
