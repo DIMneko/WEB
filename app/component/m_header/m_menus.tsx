@@ -24,25 +24,25 @@ export const M_menus = [
   {
     label: "Books",
     icon: <AutoStoriesIcon />,
-    link: `/Books`,
+    link: `${process.env.NEXT_PUBLIC_SITE_URL}/Books`,
     URL: Image002.src,
   },
   {
     label: "Blog",
     icon: <CalendarMonthIcon />,
-    link: `/Blog`,
+    link: `${process.env.NEXT_PUBLIC_SITE_URL}/Blog`,
     URL: Image003.src,
   },
   {
     label: "Gallery",
     icon: <CameraAltIcon />,
-    link: `/Gallery`,
+    link: `${process.env.NEXT_PUBLIC_SITE_URL}/Gallery`,
     URL: Image004.src,
   },
   {
     label: "Contact",
     icon: <ContactMailIcon />,
-    link: `/Contact`,
+    link: `${process.env.NEXT_PUBLIC_SITE_URL}/Contact`,
     URL: Image005.src,
   },
 ];

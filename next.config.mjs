@@ -7,7 +7,7 @@ const nextConfig = {
   },
   env: {
     NEXT_PUBLIC_BASE_URL: process.env.NODE_ENV === 'production'
-    ? 'https://dimneko.github.io/WEB/'
+    ? 'https://dimneko.github.io/WEB'
     : 'http://localhost:3000',
   },
 };
