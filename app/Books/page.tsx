@@ -9,9 +9,15 @@ interface BooksProp {
 }
 
 export default async function Books() {
-  const data = await fetch(
-    "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/posts?per_page=6",
-  );
+
+  const RestAPI = "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/posts?per_page=6";
+
+
+
+  const data = await fetch(RestAPI, {
+    // cache: "force-cache", // キャッシュ有効
+    next: { revalidate: 10 }, // 10秒でリフレッシュ
+  });
   const posts = await data.json();
 
   return (
