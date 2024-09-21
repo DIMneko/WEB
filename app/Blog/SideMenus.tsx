@@ -5,16 +5,16 @@ export const SideMenus = [
   {
     name: "最新情報",
     icon: <CalendarMonthIcon />,
-    href: "${process.env.NEXT_PUBLIC_BASE_URL}/Blog",
+    href: `${process.env.NEXT_PUBLIC_BASE_URL}/Blog`,
   },
   {
     name: "備忘録",
     icon: <AutoStoriesIcon />,
-    href: "${process.env.NEXT_PUBLIC_BASE_URL}/Books",
+    href: `${process.env.NEXT_PUBLIC_BASE_URL}/Books`,
   },
   {
     name: "ギャラリー",
     icon: <CameraAltIcon />,
-    href: "${process.env.NEXT_PUBLIC_BASE_URL}/Gallery",
+    href: `${process.env.NEXT_PUBLIC_BASE_URL}/Gallery`,
   },
 ];
