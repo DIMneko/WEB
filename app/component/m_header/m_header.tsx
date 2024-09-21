@@ -2,13 +2,15 @@
 // クライアント側で実行するコードが含まれる場合
 // 今回はボタン操作が含まれている。
 
+
 import MenuIcon from "@mui/icons-material/Menu";
+
+
 import Image from "next/image";
 
 import "./scss/m_header.scss";
-import ImageDefault from "./image/sample006.png";
-
 import { M_menus } from "./m_menus";
+import ImageDefault from "@/app/assets/image/sample006.png"
 
 interface MHeaderProp {
   site_title: string;

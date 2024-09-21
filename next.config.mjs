@@ -5,8 +5,11 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/WEB' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '/WEB' : '',
+  env: {
+    NEXT_PUBLIC_BASE_URL: process.env.NODE_ENV === 'production'
+    ? 'https://dimneko.github.io/WEB/'
+    : 'http://localhost:3000',
+  },
 };
 
 export default nextConfig;

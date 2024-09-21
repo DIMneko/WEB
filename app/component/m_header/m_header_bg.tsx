@@ -3,9 +3,9 @@
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-import DefaultImage from "./image/sample006.png";
-import { M_menus } from "./m_menus";
 
+import { M_menus } from "./m_menus";
+import DefaultImage from "@/app/assets/image/sample006.png";
 import "./scss/m_header.scss";
 
 export default function M_Heder_BG() {
