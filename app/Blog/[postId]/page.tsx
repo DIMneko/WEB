@@ -2,27 +2,30 @@ import Image from "next/image";
 import Not_Image from "../img/image.png";
 import "./scss/post.scss";
 
-
 const RestAPI = "https://hikaricreative.fool.jp/wp-json/wp/v2/posts";
 
 // 静的生成
 export async function generateStaticParams() {
-  return []
+  const posts = await fetch(RestAPI).then((res) => res.json());
+  return posts.map((post) => ({
+    postId: String(post.id),
+  }));
 }
 
-export default async function PostPage({ params }: { params: { postId: string } }) {
+export default async function PostPage({
+  params,
+}: {
+  params: { postId: string };
+}) {
   const { postId } = params;
 
-  const post_res = await fetch(`${RestAPI}/${postId}`,{
-    method: 'GET',
+  const post_res = await fetch(`${RestAPI}/${postId}`, {
+    method: "GET",
     cache: "no-cache",
   }).then((res) => res.json());
 
-
   return (
     <>
-      <p>postIdページになります。ID: {params.postId}</p>
-
       <article className="post_page">
         <div className="inner_post" key={post_res.id}>
           <div className="eye_top">

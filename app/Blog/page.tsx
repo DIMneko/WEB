@@ -13,13 +13,12 @@ import Not_Image from "./img/image.png";
 interface PostProp {
   id: number;
   title: {
-    rendered:string;
+    rendered: string;
   };
   excerpt: {
-    rendered:string;
+    rendered: string;
   };
 }
-
 
 const Blog_page = async () => {
   const data = await fetch(
@@ -35,8 +34,7 @@ const Blog_page = async () => {
       </div>
 
       <ul className="news_area">
-        {posts.map((post:PostProp) => (
-
+        {posts.map((post: PostProp) => (
           <Card className="post_archive" key={post.id}>
             <CardActionArea>
               <a href={`/Blog/${post.id}`}>

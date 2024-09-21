@@ -14,10 +14,6 @@ interface MHeaderProp {
   site_title: string;
 }
 
-
-
-
-
 const M_Header = ({ site_title }: MHeaderProp) => {
   // ----------------------------
   //   独自関数 / 定義
@@ -28,7 +24,7 @@ const M_Header = ({ site_title }: MHeaderProp) => {
     typeof document !== "undefined" ? document.querySelector("body") : null;
 
   // スクロールイベント無効関数
-  function NOTScroll(elment:Event) {
+  function NOTScroll(elment: Event) {
     elment.preventDefault();
   }
   const OnClickEvent = () => {
@@ -63,7 +59,7 @@ const M_Header = ({ site_title }: MHeaderProp) => {
   };
 
   // マウスカーソルが入った要素番号
-  const HoverLinkIn = (id:string) => {
+  const HoverLinkIn = (id: string) => {
     const Motion = [{ opacity: 0 }, { opacity: 1 }];
     const Timing: KeyframeAnimationOptions = {
       duration: 1000,
@@ -73,14 +69,14 @@ const M_Header = ({ site_title }: MHeaderProp) => {
     //指定したエリアの要素の追加・削除を行う
     const target_area = document.querySelector(".image_area");
 
-    if(target_area){
+    if (target_area) {
       // image要素の作成
       const new_image = document.createElement("img");
       new_image.src = id;
       target_area.appendChild(new_image);
       new_image.animate(Motion, Timing);
     } else {
-      console.error("not Target")
+      console.error("not Target");
     }
   };
   // マウスカーソルが外れた要素番号
