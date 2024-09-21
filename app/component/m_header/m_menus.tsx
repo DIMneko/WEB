@@ -14,35 +14,36 @@ import Image004 from "@/app/assets/image/sample004.png";
 import Image005 from "@/app/assets/image/sample005.png";
 
 
+
 export const M_menus = [
   {
     label: "Home",
     icon: <CottageIcon />,
-    link: `${process.env.NEXT_PUBLIC_SITE_URL}/`,
+    link: `${process.env.NEXT_PUBLIC_BASE_URL}/`,
     URL: Image001.src,
   },
   {
     label: "Books",
     icon: <AutoStoriesIcon />,
-    link: `${process.env.NEXT_PUBLIC_SITE_URL}/Books`,
+    link: `${process.env.NEXT_PUBLIC_BASE_URL}/Books`,
     URL: Image002.src,
   },
   {
     label: "Blog",
     icon: <CalendarMonthIcon />,
-    link: `${process.env.NEXT_PUBLIC_SITE_URL}/Blog`,
+    link: `${process.env.NEXT_PUBLIC_BASE_URL}/Blog`,
     URL: Image003.src,
   },
   {
     label: "Gallery",
     icon: <CameraAltIcon />,
-    link: `${process.env.NEXT_PUBLIC_SITE_URL}/Gallery`,
+    link: `${process.env.NEXT_PUBLIC_BASE_URL}/Gallery`,
     URL: Image004.src,
   },
   {
     label: "Contact",
     icon: <ContactMailIcon />,
-    link: `${process.env.NEXT_PUBLIC_SITE_URL}/Contact`,
+    link: `${process.env.NEXT_PUBLIC_BASE_URL}/Contact`,
     URL: Image005.src,
   },
 ];
