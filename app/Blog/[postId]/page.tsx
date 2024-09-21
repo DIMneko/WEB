@@ -2,12 +2,18 @@ import Image from "next/image";
 import Not_Image from "../img/image.png";
 import "./scss/post.scss";
 
+
+interface PostPageProp {
+  id: number;
+}
+
 const RestAPI = "https://hikaricreative.fool.jp/wp-json/wp/v2/posts";
+
 
 // 静的生成
 export async function generateStaticParams() {
   const posts = await fetch(RestAPI).then((res) => res.json());
-  return posts.map((post) => ({
+  return posts.map((post:PostPageProp) => ({
     postId: String(post.id),
   }));
 }

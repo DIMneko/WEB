@@ -1,11 +1,17 @@
 import "../scss/Books.scss";
 
+
+interface BookPageProp {
+    id: number;
+  }
+  
+
 const RestAPI = "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/posts";
 
 // 静的生成
 export async function generateStaticParams() {
   const posts = await fetch(RestAPI).then((res) => res.json());
-  return posts.map((post) => ({
+  return posts.map((post:BookPageProp) => ({
     bookId: String(post.id),
   }));
 }
