@@ -10,9 +10,12 @@ import "./scss/m_header.scss";
 
 export default function M_Heder_BG() {
   const pathname = usePathname();
+  const Fullpath = `${process.env.NEXT_PUBLIC_BASE_URL}${pathname}`
 
   // 一致するメニューある項目を取得
-  const currentMenu = M_menus.find((menu) => menu.link === pathname);
+  const currentMenu = M_menus.find((menu) => menu.link === Fullpath);
+
+  
 
   return (
     <div className="header_bg ">
