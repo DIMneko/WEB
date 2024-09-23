@@ -10,6 +10,9 @@ export async function generateStaticParams() {
   try {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_BASE_URL}/api/Blog`,
+      {
+        cache: "no-store",
+      },
     );
     if (!response.ok) {
       throw new Error("[SulgPage]: Failed to fetch posts");

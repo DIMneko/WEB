@@ -6,14 +6,26 @@ interface testProp {
 }
 
 export async function generateStaticParams() {
-  const posts = await fetch(
-    "${process.env.NEXT_PUBLIC_BASE_URL}/api/Blog",
-  ).then((res) => res.json());
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/Blog`,
+      {
+        cache: "no-store",
+      },
+    );
+    if (!response.ok) {
+      throw new Error("[SulgPage]: Failed to fetch posts");
+    }
 
-  // Render the first 10 posts at build time
-  return posts.slice(0, 10).map((post: testProp) => ({
-    slug: String(post.id),
-  }));
+    const posts = await response.json();
+
+    return posts.map((post: testProp) => ({
+      slug: String(post.id),
+    }));
+  } catch (error) {
+    console.error("Error fetching posts:", error);
+    return [];
+  }
 }
 
 export async function GET(
