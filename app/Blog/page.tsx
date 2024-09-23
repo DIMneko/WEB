@@ -33,7 +33,7 @@ const Blog_page = async () => {
   console.log( `${process.env.NEXT_PUBLIC_BASE_URL}/api/posts` )
   if(!res.ok){
     console.error('fetchが正常に処理されません')
-  }
+  } 
 
   const posts = await res.json();
 
