@@ -5,19 +5,16 @@ interface testProp {
   id: number;
 }
 
-
 export async function generateStaticParams() {
-    const posts = await fetch('${process.env.NEXT_PUBLIC_BASE_URL}/api/Blog').then((res) => res.json())
-    if (!res.ok) {
-        throw new Error("[route.ts]:Failed to fetch posts");
-      }
-   
-    // Render the first 10 posts at build time
-    return posts.slice(0, 10).map((post:testProp) => ({
-      slug: String(post.slug),
-    }))
-  }
+  const posts = await fetch(
+    "${process.env.NEXT_PUBLIC_BASE_URL}/api/Blog",
+  ).then((res) => res.json());
 
+  // Render the first 10 posts at build time
+  return posts.slice(0, 10).map((post: testProp) => ({
+    slug: String(post.slug),
+  }));
+}
 
 export async function GET(
   request: Request,
