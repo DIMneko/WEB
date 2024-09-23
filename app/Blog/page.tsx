@@ -41,7 +41,7 @@ export default async function Blog_page() {
       </div> */}
 
       <ul className="news_area">
-        {posts.map((post) => (
+        {posts.map((post:PostProp) => (
           <Card className="post_archive" key={post.id}>
             <CardActionArea>
               <a href={`${process.env.NEXT_PUBLIC_BASE_URL}/Blog/${post.id}`}>
