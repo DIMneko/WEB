@@ -24,7 +24,6 @@ export async function generateStaticParams() {
   }
 }
 
-console.log(await generateStaticParams() )
 
 export default async function PostPage({
   params,
