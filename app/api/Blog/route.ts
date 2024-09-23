@@ -2,9 +2,7 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
-    const res = await fetch(`${process.env.BOOKS_BASE_URL}`, {
-      cache: "no-store",
-    });
+    const res = await fetch(`${process.env.BOOKS_BASE_URL}`);
 
     if (!res.ok) {
       throw new Error("Failed to fetch posts");
