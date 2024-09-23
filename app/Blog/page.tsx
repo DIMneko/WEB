@@ -25,11 +25,21 @@ interface PostProp {
   };
 }
 
-export const dynamic = 'force-dynamic'; // 動的データ取得を強制
+export const revalidate = 60; // 1分ごとに再生成される設定 (ISR)
 
 const Blog_page = async () => {
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts`);
+  const apiUrl = process.env.POSTS_BASE_URL || `${process.env.NEXT_PUBLIC_BASE_URL}/api/posts`;
+
+  const res = await fetch(apiUrl,{
+    next: { revalidate: 60 },
+  });
+
+  if(!res.ok){
+    throw new Error('Failed to fetch posts');
+  }
+
+
   const posts = await res.json();
 
   return (
