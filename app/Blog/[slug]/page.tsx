@@ -1,62 +1,46 @@
-import Image from "next/image";
-import Not_Image from "../img/image.png";
-import "../scss/blog.scss";
+// app/Blog/[slug]/page.tsx
+import React from 'react';
 
-
-
-
-
-// Generate Params from top down
-// interface testProp {
-//   id: number;
-// }
-// export async function generateStaticParams() {
-//   try {
-//     const response = await fetch(
-//       `${process.env.NEXT_PUBLIC_BASE_URL}/api/Blog`,
-//       {
-//         cache: "no-store",
-//       },
-//     );
-//     if (!response.ok) {
-//       throw new Error("[SulgPage]: Failed to fetch posts");
-//     }
-
-//     const posts = await response.json();
-
-//     return posts.map((post: testProp) => ({
-//       slug: post.id.toString(),
-//     }));
-//   } catch (error) {
-//     console.error("Error fetching posts:", error);
-//     return [];
-//   }
-// }
-
-export default async function PostPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const slug = params.slug;
-  const post_res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/Blog/${slug}`,
-  ).then((res) => res.json());
-
-  return (
-    <>
-      <article className="post_page">
-        <div className="inner_post" key={post_res.id}>
-          <div className="eye_top">
-            <Image className="eye_catch" src={Not_Image} alt="画像なし" />
-            <h2>{post_res.title.rendered}</h2>
-          </div>
-          <div
-            className="post_content"
-            dangerouslySetInnerHTML={{ __html: post_res.content.rendered }}
-          />
-        </div>
-      </article>
-    </>
-  );
+interface Post {
+    id: number;
+    title: {
+      rendered: string;
+    };
+    content:{
+      rendered: string;
+    };
+    excerpt: {
+      rendered: string;
+    };
 }
+
+export async function generateStaticParams() {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/Blog`);
+    const posts: Post[] = await res.json();
+  
+    // 各ポストのスラッグを持つオブジェクトの配列を返す
+    return posts.map((post) => ({
+      slug: String(post.id), // スラッグを指定
+    }));
+}
+
+interface BlogPostProps {
+params: {
+    slug: string;
+};
+}
+  
+const BlogPost: React.FC<BlogPostProps> = async ({ params }) => {
+    const post = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/Blog/${params.slug}`);
+    const data: Post = await post.json();
+  
+    return (
+      <div>
+        <h1>{data.title.rendered}</h1>
+        <p>{data.content.rendered}</p>
+      </div>
+    );
+  };
+  
+  export default BlogPost;
+
