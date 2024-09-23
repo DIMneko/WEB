@@ -12,7 +12,7 @@ export async function generateStaticParams() {
 
   // Render the first 10 posts at build time
   return posts.slice(0, 10).map((post: testProp) => ({
-    slug: String(post.slug),
+    slug: String(post.id),
   }));
 }
 
