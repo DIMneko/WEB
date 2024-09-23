@@ -2,37 +2,11 @@ import Image from "next/image";
 import Not_Image from "../img/image.png";
 import "./scss/post.scss";
 
-interface PostPageProp {
-  id: number;
-}
 
-
-
-// 静的生成
-export async function generateStaticParams() {
-  try {
-    const posts = await fetch(`${process.env.BOOKS_BASE_URL}`).then((res) => res.json())
-
-    return posts.map((post: PostPageProp) => ({
-      postId: String(post.id),
-    }));
-
-
-  } catch (error) {
-    console.error("Error fetching posts", error);
-    return [];
-  }
-}
-
-
-export default async function PostPage({
-  params,
-}: {
-  params: { postId: string };
-}) {
-  const { postId } = params;
-
-  const post_res = await fetch(`${process.env.BOOKS_BASE_URL}/${postId}`).then((res) => res.json());
+export default async function PostPage({ params }: { params: { postId: string } }) {
+  
+  const postId = params.postId;
+  const post_res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/Blog/${postId}`).then((res) => res.json());
 
   return (
     <>
