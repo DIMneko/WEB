@@ -7,12 +7,8 @@ import CardMedia from "@mui/material/CardMedia";
 // import Image from "next/image";
 import Typography from "@mui/material/Typography";
 
-
 import "./scss/blog.scss";
 import Not_Image from "./img/image.png";
-
-
-
 
 interface PostProp {
   id: number;
@@ -24,24 +20,23 @@ interface PostProp {
   };
 }
 
-
 export default async function Blog_page() {
-
-  const res = await fetch(`http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/posts`)
-  console.log(`res: ${res.status}`)
-  const posts = await res.json()
-  console.log(`posts: ${posts}`)
-
+  const res = await fetch(`${process.env.BOOKS_BASE_URL}`, {
+    cache: "no-store",
+  });
+  console.log(`res: ${res.status}`);
+  const posts = await res.json();
+  console.log(`posts: ${posts}`);
 
   return (
     <>
-      {/* <div className="coment_type">
+      <div className="coment_type">
         <p>RestAPIを使ったブログ表示に挑戦。 </p>
         <p>また、各ページまでも同様に再現する(目標)</p>
-      </div> */}
+      </div>
 
       <ul className="news_area">
-        {posts.map((post:PostProp) => (
+        {posts.map((post: PostProp) => (
           <Card className="post_archive" key={post.id}>
             <CardActionArea>
               <a href={`${process.env.NEXT_PUBLIC_BASE_URL}/Blog/${post.id}`}>
@@ -66,9 +61,6 @@ export default async function Blog_page() {
           </Card>
         ))}
       </ul>
-      
     </>
   );
-};
-
-
+}

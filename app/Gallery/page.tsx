@@ -1,6 +1,5 @@
 "use client";
 
-
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import Image from "next/image";
@@ -8,7 +7,6 @@ import { useState } from "react";
 
 import "./scss/Gallery.scss";
 import { DemoGallerys } from "./DemoGallery";
-
 
 export default function Gallery() {
   // 初期ステータス　page1

@@ -2,15 +2,13 @@
 // クライアント側で実行するコードが含まれる場合
 // 今回はボタン操作が含まれている。
 
-
 import MenuIcon from "@mui/icons-material/Menu";
-
 
 import Image from "next/image";
 
 import "./scss/m_header.scss";
 import { M_menus } from "./m_menus";
-import ImageDefault from "@/app/assets/image/sample006.png"
+import ImageDefault from "@/app/assets/image/sample006.png";
 
 interface MHeaderProp {
   site_title: string;
@@ -20,7 +18,7 @@ const M_Header = ({ site_title }: MHeaderProp) => {
   // ----------------------------
   //   独自関数 / 定義
   // ----------------------------
-  
+
   let flug = true;
   const Timer = 1000;
   const body =

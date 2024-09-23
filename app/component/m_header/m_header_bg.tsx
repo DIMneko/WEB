@@ -3,19 +3,16 @@
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-
 import { M_menus } from "./m_menus";
 import DefaultImage from "@/app/assets/image/sample006.png";
 import "./scss/m_header.scss";
 
 export default function M_Heder_BG() {
   const pathname = usePathname();
-  const Fullpath = `${process.env.NEXT_PUBLIC_BASE_URL}${pathname}`
+  const Fullpath = `${process.env.NEXT_PUBLIC_BASE_URL}${pathname}`;
 
   // 一致するメニューある項目を取得
   const currentMenu = M_menus.find((menu) => menu.link === Fullpath);
-
-  
 
   return (
     <div className="header_bg ">

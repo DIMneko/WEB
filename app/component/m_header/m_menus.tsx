@@ -5,15 +5,12 @@ import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import CottageIcon from "@mui/icons-material/Cottage";
 
-
 // 2. 内部モジュールのインポート (プロジェクト内モジュール)
 import Image001 from "@/app/assets/image/sample001.png";
 import Image002 from "@/app/assets/image/sample002.png";
 import Image003 from "@/app/assets/image/sample003.png";
 import Image004 from "@/app/assets/image/sample004.png";
 import Image005 from "@/app/assets/image/sample005.png";
-
-
 
 export const M_menus = [
   {
