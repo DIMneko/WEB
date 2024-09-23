@@ -27,7 +27,7 @@ interface PostProp {
 
 export default async function Blog_page() {
 
-  const res = await fetch(`${process.env.BOOKS_BASE_URL}`)
+  const res = await fetch(`http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/posts`)
   console.log(`res: ${res.status}`)
   const posts = await res.json()
   console.log(`posts: ${posts}`)
