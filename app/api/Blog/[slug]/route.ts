@@ -4,25 +4,20 @@ import { NextResponse } from "next/server";
 interface testProp {
   id: number;
 }
+
+
 export async function generateStaticParams() {
-  try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/Blog`,
-    );
-    if (!response.ok) {
-      throw new Error("[route.ts]:Failed to fetch posts");
-    }
-
-    const posts = await response.json();
-
-    return posts.map((post: testProp) => ({
-      slug: String(post.id),
-    }));
-  } catch (error) {
-    console.error("Error fetching posts:", error);
-    return [];
+    const posts = await fetch('${process.env.NEXT_PUBLIC_BASE_URL}/api/Blog').then((res) => res.json())
+    if (!res.ok) {
+        throw new Error("[route.ts]:Failed to fetch posts");
+      }
+   
+    // Render the first 10 posts at build time
+    return posts.slice(0, 10).map((post:testProp) => ({
+      slug: String(post.slug),
+    }))
   }
-}
+
 
 export async function GET(
   request: Request,
