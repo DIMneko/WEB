@@ -24,9 +24,9 @@ export default async function Blog_page() {
   const res = await fetch(`${process.env.BOOKS_BASE_URL}`, {
     cache: "no-store",
   });
-  console.log(`res: ${res.status}`);
+  // console.log(`res: ${res.status}`);
   const posts = await res.json();
-  console.log(`posts: ${posts}`);
+  // console.log(`posts: ${posts}`);
 
   return (
     <>
