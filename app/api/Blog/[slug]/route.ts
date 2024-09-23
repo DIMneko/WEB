@@ -14,16 +14,16 @@ export async function generateStaticParams() {
       },
     );
     if (!response.ok) {
-      throw new Error("[SulgPage]: Failed to fetch posts");
+      throw new Error("[route.ts]: Failed to fetch posts");
     }
 
     const posts = await response.json();
 
     return posts.map((post: testProp) => ({
-      slug: String(post.id),
+      slug: post.id.toString(),
     }));
   } catch (error) {
-    console.error("Error fetching posts:", error);
+    console.error("[route.ts]Error fetching posts:", error);
     return [];
   }
 }

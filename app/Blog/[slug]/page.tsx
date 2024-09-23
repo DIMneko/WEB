@@ -21,7 +21,7 @@ export async function generateStaticParams() {
     const posts = await response.json();
 
     return posts.map((post: testProp) => ({
-      slug: String(post.id),
+      slug: post.id.toString(),
     }));
   } catch (error) {
     console.error("Error fetching posts:", error);
