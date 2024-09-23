@@ -15,6 +15,9 @@ interface PostProp {
   title: {
     rendered: string;
   };
+  content:{
+    rendered: string;
+  };
   excerpt: {
     rendered: string;
   };

@@ -2,32 +2,36 @@ import Image from "next/image";
 import Not_Image from "../img/image.png";
 import "../scss/blog.scss";
 
+
+
+
+
 // Generate Params from top down
-interface testProp {
-  id: number;
-}
-export async function generateStaticParams() {
-  try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/Blog`,
-      {
-        cache: "no-store",
-      },
-    );
-    if (!response.ok) {
-      throw new Error("[SulgPage]: Failed to fetch posts");
-    }
+// interface testProp {
+//   id: number;
+// }
+// export async function generateStaticParams() {
+//   try {
+//     const response = await fetch(
+//       `${process.env.NEXT_PUBLIC_BASE_URL}/api/Blog`,
+//       {
+//         cache: "no-store",
+//       },
+//     );
+//     if (!response.ok) {
+//       throw new Error("[SulgPage]: Failed to fetch posts");
+//     }
 
-    const posts = await response.json();
+//     const posts = await response.json();
 
-    return posts.map((post: testProp) => ({
-      slug: post.id.toString(),
-    }));
-  } catch (error) {
-    console.error("Error fetching posts:", error);
-    return [];
-  }
-}
+//     return posts.map((post: testProp) => ({
+//       slug: post.id.toString(),
+//     }));
+//   } catch (error) {
+//     console.error("Error fetching posts:", error);
+//     return [];
+//   }
+// }
 
 export default async function PostPage({
   params,
