@@ -12,7 +12,7 @@ export async function generateStaticParams() {
       `${process.env.NEXT_PUBLIC_BASE_URL}/api/Blog`,
     );
     if (!response.ok) {
-      throw new Error("Failed to fetch posts");
+      throw new Error("[SulgPage]: Failed to fetch posts");
     }
 
     const posts = await response.json();
