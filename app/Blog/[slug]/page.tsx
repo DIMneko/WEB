@@ -1,12 +1,26 @@
 import Image from "next/image";
 import Not_Image from "../img/image.png";
-import "./scss/post.scss";
+import "../scss/blog.scss";
+
+interface testProp {
+  id: number;
+}
 
 
-export default async function PostPage({ params }: { params: { postId: string } }) {
+export async function generateStaticParams(){
+  const posts = await fetch(`${process.env.BOOKS_BASE_URL}`).then((res) => res.json());
+
+  return posts.map((post:testProp) => ({
+    slug: post.slug,
+  }));
+}
+
+
+
+export default async function PostPage({ params }: { params: { slug: string } }) {
   
-  const postId = params.postId;
-  const post_res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/Blog/${postId}`).then((res) => res.json());
+  const slug = params.slug;
+  const post_res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/Blog/${slug}`).then((res) => res.json());
 
   return (
     <>
