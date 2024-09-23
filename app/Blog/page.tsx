@@ -29,7 +29,7 @@ export const revalidate = 60; // 1分ごとに再生成される設定 (ISR)
 
 const Blog_page = async () => {
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts`);
+  const res = await fetch(`${process.env.POSTS_BASE_URL}`);
 
   if(!res.ok){
     console.error(`不正：${res.status}`)
