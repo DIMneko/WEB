@@ -11,7 +11,7 @@ export async function generateStaticParams(){
   const posts = await fetch(`${process.env.BOOKS_BASE_URL}`).then((res) => res.json());
 
   return posts.map((post:testProp) => ({
-    slug: post.slug,
+    slug: post.id,
   }));
 }
 
