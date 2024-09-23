@@ -20,7 +20,7 @@ const M_Header = ({ site_title }: MHeaderProp) => {
   // ----------------------------
   //   独自関数 / 定義
   // ----------------------------
-  console.log(`${process.env.NEXT_PUBLIC_BASE_URL}/Books/`)
+  
   let flug = true;
   const Timer = 1000;
   const body =

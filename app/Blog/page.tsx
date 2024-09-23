@@ -8,7 +8,6 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 
 
-
 import "./scss/blog.scss";
 import Not_Image from "./img/image.png";
 
@@ -25,19 +24,14 @@ interface PostProp {
   };
 }
 
-export const revalidate = 60; // 1分ごとに再生成される設定 (ISR)
 
-const Blog_page = async () => {
+export default async function Blog_page() {
 
-  const res = await fetch(`${process.env.POSTS_BASE_URL}`);
+  const res = await fetch(`${process.env.POSTS_BASE_URL}`)
+  console.log(`res: ${res.status}`)
+  const posts = await res.json()
+  console.log(`posts: ${posts}`)
 
-  if(!res.ok){
-    console.error(`不正：${res.status}`)
-  } else {
-    console.log(res)
-  }
-
-  const posts = await res.json();
 
   return (
     <>
@@ -47,7 +41,7 @@ const Blog_page = async () => {
       </div> */}
 
       <ul className="news_area">
-        {posts.map((post: PostProp) => (
+        {posts.map((post) => (
           <Card className="post_archive" key={post.id}>
             <CardActionArea>
               <a href={`${process.env.NEXT_PUBLIC_BASE_URL}/Blog/${post.id}`}>
@@ -77,4 +71,4 @@ const Blog_page = async () => {
   );
 };
 
-export default Blog_page;
+
