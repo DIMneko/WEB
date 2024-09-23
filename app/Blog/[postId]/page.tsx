@@ -6,27 +6,25 @@ interface PostPageProp {
   id: number;
 }
 
-const RestAPI = `${process.env.BOOKS_BASE_URL}`;
+
 
 // 静的生成
 export async function generateStaticParams() {
   try {
-    const response = await fetch(RestAPI);
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    const posts = await response.json();
+    const posts = await fetch(`${process.env.BOOKS_BASE_URL}`).then((res) => res.json())
 
     return posts.map((post: PostPageProp) => ({
       postId: String(post.id),
     }));
+
+
   } catch (error) {
     console.error("Error fetching posts", error);
     return [];
   }
 }
+
+console.log(await generateStaticParams() )
 
 export default async function PostPage({
   params,
@@ -35,9 +33,7 @@ export default async function PostPage({
 }) {
   const { postId } = params;
 
-  const post_res = await fetch(`${RestAPI}/${postId}`).then((res) =>
-    res.json(),
-  );
+  const post_res = await fetch(`${process.env.BOOKS_BASE_URL}/${postId}`).then((res) => res.json());
 
   return (
     <>
