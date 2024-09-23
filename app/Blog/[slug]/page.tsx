@@ -2,25 +2,39 @@ import Image from "next/image";
 import Not_Image from "../img/image.png";
 import "../scss/blog.scss";
 
+// Generate Params from top down
 interface testProp {
   id: number;
 }
+export async function generateStaticParams() {
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/Blog`,
+    );
+    if (!response.ok) {
+      throw new Error("Failed to fetch posts");
+    }
 
+    const posts = await response.json();
 
-export async function generateStaticParams(){
-  const posts = await fetch(`${process.env.BOOKS_BASE_URL}`).then((res) => res.json());
-
-  return posts.map((post:testProp) => ({
-    slug: post.id,
-  }));
+    return posts.map((post: testProp) => ({
+      slug: String(post.id),
+    }));
+  } catch (error) {
+    console.error("Error fetching posts:", error);
+    return [];
+  }
 }
 
-
-
-export default async function PostPage({ params }: { params: { slug: string } }) {
-  
+export default async function PostPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const slug = params.slug;
-  const post_res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/Blog/${slug}`).then((res) => res.json());
+  const post_res = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/Blog/${slug}`,
+  ).then((res) => res.json());
 
   return (
     <>
