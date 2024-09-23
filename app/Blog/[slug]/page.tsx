@@ -15,7 +15,7 @@ interface Post {
 }
 
 export async function generateStaticParams() {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/Blog`);
+    const res = await fetch(`${process.env.BOOKS_BASE_URL}`);
     const posts: Post[] = await res.json();
   
     // 各ポストのスラッグを持つオブジェクトの配列を返す
@@ -31,7 +31,7 @@ params: {
 }
   
 const BlogPost: React.FC<BlogPostProps> = async ({ params }) => {
-    const post = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/Blog/${params.slug}`);
+    const post = await fetch(`${process.env.BOOKS_BASE_URL}/${params.slug}`);
     const data: Post = await post.json();
   
     return (
