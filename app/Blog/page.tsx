@@ -30,9 +30,7 @@ interface PostProp {
 
 async function getPosts() {
   const ENDPOINT = "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/posts"
-  const res = await fetch(ENDPOINT, {
-    cache: "no-store",
-  })
+  const res = await fetch(ENDPOINT)
   const data = await res.json()
   return data
 }
