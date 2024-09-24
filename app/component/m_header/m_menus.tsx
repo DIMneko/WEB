@@ -21,13 +21,13 @@ export const M_menus = [
   },
   {
     label: "Books",
-    icon: <AutoStoriesIcon />,
+    icon: <CalendarMonthIcon />,
     link: `${process.env.NEXT_PUBLIC_BASE_URL}/Books`,
     URL: Image002.src,
   },
   {
     label: "Blog",
-    icon: <CalendarMonthIcon />,
+    icon: <AutoStoriesIcon />,
     link: `${process.env.NEXT_PUBLIC_BASE_URL}/Blog`,
     URL: Image003.src,
   },
