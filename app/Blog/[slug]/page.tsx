@@ -27,9 +27,16 @@ const BlogPost: React.FC<BlogPostProps> = async ({ params }) => {
     const data: Post = await post.json();
   
     return (
-      <div>
-        <h1>{data.title.rendered}</h1>
-        <p>{data.excerpt.rendered}</p>
+        <div className="book_page">
+        <article className="book_inner">
+          <div className="inner_post">
+            <h2>{data.title.rendered}</h2>
+            <div
+              className="post_content"
+              dangerouslySetInnerHTML={{ __html: data.content.rendered }}
+            />
+          </div>
+        </article>
       </div>
     );
   };

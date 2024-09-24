@@ -116,3 +116,46 @@ main.layout_flex {
 }
 
 
+
+.book_page {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1em;
+
+    .book_inner {
+        width: clamp(300px,96%,900px);
+        margin: 0 auto;
+        .inner_post {
+            h2 {
+                font-size: 1.3em;
+                font-weight: bold;
+                line-height: 1.1em;
+                letter-spacing: 0.05em;
+                margin: 0 0 1em;
+                padding: 0 0 0.3em;
+                border-bottom: 2px solid #333;
+            }
+            * h2 {
+                margin: 2em 0;
+            }
+        }
+        .post_content {
+            .wp-block-code {
+                background-color: #333;
+                box-sizing: border-box;
+                padding: 2em;
+                overflow: scroll;
+            }
+            code {
+                color: #fff;
+            }
+
+            * + p {
+                margin: 1.6em 0;
+                font-size: 1.1em;
+                letter-spacing: 0.05em;
+                line-height: 1.6em;
+            }
+        }
+    }
+}
