@@ -1,16 +1,5 @@
-import Card from "@mui/material/Card";
-import CardActionArea from "@mui/material/CardActionArea";
-
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-
-// import Image from "next/image";
-import Typography from "@mui/material/Typography";
-import Link from "next/link";
-
 import "@/app/Blog/scss/blog.scss";
-import Not_Image from "@/app/Blog/img/image.png";
-
+import Link from "next/link";
 
 interface PostProp {
   id: number;
@@ -39,30 +28,12 @@ export default async function Blog_page() {
   const posts = await getPosts()
   return (
     <>
-      <ul className="news_area">
-        {posts.map((post: PostProp) => (
-          <Card className="post_archive" key={post.id}>
-            <CardActionArea>
-              <Link href={`${process.env.NEXT_PUBLIC_BASE_URL}/Blog/${post.id}`}>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image={Not_Image.src}
-                  alt="NotImage"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {post.title.rendered}
-                  </Typography>
-                  <div
-                    dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
-                  />
-                </CardContent>
-              </Link>
-            </CardActionArea>
-          </Card>
-        ))}
-      </ul>
+    {posts.map((post:PostProp)=>(
+      <div key={post.id}>
+        <h3>{post.title.rendered}</h3>
+        <Link href={`${process.env.NEXT_PUBLIC_BASE_URL}/Blog/${post.id}`}>もっと見る</Link>
+      </div>
+    ))}
     </>
   );
 }
