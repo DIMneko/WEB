@@ -3,8 +3,6 @@ import React from "react";
 import "./scss/blog.scss";
 import { SideMenus } from "./SideMenus";
 
-
-
 // レイアウト設定
 const SettingsLayout = ({ children }: { children: React.ReactNode }) => {
   return (

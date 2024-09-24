@@ -37,21 +37,17 @@ export default function Gallery() {
     <>
       <p>Gallery_page</p>
       <ImageList cols={3}>
-        {currenItems.map((value, index) => {
-          return (
-            <>
-              <ImageListItem key={index}>
-                <Image
-                  src={`${value.URL}?w=200&fit=crop&auto=format`}
-                  alt={value.label}
-                  width={500}
-                  height={500}
-                  loading="lazy"
-                />
-              </ImageListItem>
-            </>
-          );
-        })}
+        {currenItems.map((value) => (
+          <ImageListItem key={value.id}>
+            <Image
+              src={`${value.URL}?w=200&fit=crop&auto=format`}
+              alt={value.label}
+              width={500}
+              height={500}
+              loading="lazy"
+            />
+          </ImageListItem>
+        ))}
       </ImageList>
       <div className="page_nation">
         {!(currentPage === 1) && (
