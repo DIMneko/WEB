@@ -1,7 +1,7 @@
 // app/Blog/[slug]/page.tsx
 import React from 'react';
 
-const ENDPOINT = "https://jsonplaceholder.typicode.com/posts"
+const ENDPOINT = "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/posts"
 
 interface Post {
     id: number;
