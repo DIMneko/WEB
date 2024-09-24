@@ -26,17 +26,20 @@ interface PostProp {
   };
 }
 
-export default async function Blog_page() {
-  
+async function getPosts() {
   const ENDPOINT = "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/posts"
-
-
   const res = await fetch(ENDPOINT, {
     cache: "no-store",
-  });
-  // console.log(`res: ${res.status}`);
-  const posts = await res.json();
-  // console.log(`posts: ${posts}`);
+  })
+  const data = await res.json()
+  return data
+}
+
+
+
+export default async function Blog_page() {
+  
+  const posts = await getPosts()
 
   return (
     <>
