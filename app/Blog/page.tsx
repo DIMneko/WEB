@@ -6,6 +6,8 @@ import CardMedia from "@mui/material/CardMedia";
 
 // import Image from "next/image";
 import Typography from "@mui/material/Typography";
+import Link from "next/link";
+
 
 import "./scss/blog.scss";
 import Not_Image from "./img/image.png";
@@ -48,7 +50,7 @@ export default async function Blog_page() {
         {posts.map((post: PostProp) => (
           <Card className="post_archive" key={post.id}>
             <CardActionArea>
-              <a href={`${process.env.NEXT_PUBLIC_BASE_URL}/Blog/${post.id}`}>
+              <Link href={`${process.env.NEXT_PUBLIC_BASE_URL}/Blog/${post.id}`}>
                 <CardMedia
                   component="img"
                   height="140"
@@ -63,7 +65,7 @@ export default async function Blog_page() {
                     dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
                   />
                 </CardContent>
-              </a>
+              </Link>
             </CardActionArea>
           </Card>
         ))}
