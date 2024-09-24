@@ -14,7 +14,29 @@ interface Post {
     };
 }
 
-export async function generateStaticParams() {
+interface BlogPostProps {
+params: {
+    slug: string;
+};
+}
+  
+const BlogPost: React.FC<BlogPostProps> = async ({ params }) => {
+    const post = await fetch(`${process.env.BOOKS_BASE_URL}/${params.slug}`);
+    const data: Post = await post.json();
+  
+    return (
+      <div>
+        <h1>{data.title.rendered}</h1>
+        <p>{data.content.rendered}</p>
+      </div>
+    );
+  };
+  
+  export default BlogPost;
+
+
+
+  export async function generateStaticParams() {
 
     try {
 
@@ -36,25 +58,4 @@ export async function generateStaticParams() {
 
 
 }
-
-
-interface BlogPostProps {
-params: {
-    slug: string;
-};
-}
-  
-const BlogPost: React.FC<BlogPostProps> = async ({ params }) => {
-    const post = await fetch(`${process.env.BOOKS_BASE_URL}/${params.slug}`);
-    const data: Post = await post.json();
-  
-    return (
-      <div>
-        <h1>{data.title.rendered}</h1>
-        <p>{data.content.rendered}</p>
-      </div>
-    );
-  };
-  
-  export default BlogPost;
 
