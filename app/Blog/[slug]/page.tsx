@@ -1,17 +1,12 @@
 // app/Blog/[slug]/page.tsx
 import React from 'react';
 
+const ENDPOINT = "https://jsonplaceholder.typicode.com/posts"
+
 interface Post {
     id: number;
-    title: {
-      rendered: string;
-    };
-    content:{
-      rendered: string;
-    };
-    excerpt: {
-      rendered: string;
-    };
+    title:string;
+    body:string;
 }
 
 interface BlogPostProps {
@@ -21,13 +16,13 @@ params: {
 }
   
 const BlogPost: React.FC<BlogPostProps> = async ({ params }) => {
-    const post = await fetch(`${process.env.BOOKS_BASE_URL}/${params.slug}`);
+    const post = await fetch(`${ENDPOINT}/${params.slug}`);
     const data: Post = await post.json();
   
     return (
       <div>
-        <h1>{data.title.rendered}</h1>
-        <p>{data.content.rendered}</p>
+        <h1>{data.title}</h1>
+        <p>{data.body}</p>
       </div>
     );
   };
@@ -40,7 +35,9 @@ const BlogPost: React.FC<BlogPostProps> = async ({ params }) => {
 
     try {
 
-        const res = await fetch(`${process.env.BOOKS_BASE_URL}`);
+        const res = await fetch(ENDPOINT, {
+            cache: "force-cache",
+        });
         if(!res.ok){
             console.error("Static: fetch Error")
         }
