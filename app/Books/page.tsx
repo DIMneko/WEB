@@ -16,15 +16,13 @@ interface PostProp {
 
 async function getPosts() {
   const ENDPOINT = "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/posts"
-  const res = await fetch(ENDPOINT,{
-    cache: "no-store",
-  })
+  const res = await fetch(ENDPOINT)
   const data = await res.json()
   return data
 }
 
 
-export default async function Blog_page() {
+export default async function Book_page() {
   const posts = await getPosts()
   return (
     <>
