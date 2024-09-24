@@ -5,14 +5,21 @@ const ENDPOINT = "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/posts"
 
 interface Post {
     id: number;
-    title:string;
-    body:string;
+    title: {
+        rendered: string;
+    };
+    content:{
+        rendered: string;
+    };
+    excerpt: {
+        rendered: string;
+    };
 }
 
 interface BlogPostProps {
-params: {
-    slug: string;
-};
+    params: {
+        slug: string;
+    };
 }
   
 const BlogPost: React.FC<BlogPostProps> = async ({ params }) => {
@@ -21,8 +28,8 @@ const BlogPost: React.FC<BlogPostProps> = async ({ params }) => {
   
     return (
       <div>
-        <h1>{data.title}</h1>
-        <p>{data.body}</p>
+        <h1>{data.title.rendered}</h1>
+        <p>{data.excerpt.rendered}</p>
       </div>
     );
   };
