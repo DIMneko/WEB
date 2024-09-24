@@ -15,14 +15,28 @@ interface Post {
 }
 
 export async function generateStaticParams() {
-    const res = await fetch(`${process.env.BOOKS_BASE_URL}`);
-    const posts: Post[] = await res.json();
-  
-    // 各ポストのスラッグを持つオブジェクトの配列を返す
-    return posts.map((post) => ({
-      slug: String(post.id), // スラッグを指定
-    }));
+
+    try {
+
+        const res = await fetch(`${process.env.BOOKS_BASE_URL}`);
+        if(!res.ok){
+            console.error("Static: fetch Error")
+        }
+        const posts: Post[] = await res.json();
+      
+        // 各ポストのスラッグを持つオブジェクトの配列を返す
+        return posts.map((post) => ({
+          slug: String(post.id), // スラッグを指定
+        }));
+
+    } catch (error){
+        console.error("Static params:",error);
+        return [];
+    }
+
+
 }
+
 
 interface BlogPostProps {
 params: {
