@@ -10,6 +10,9 @@ import Typography from "@mui/material/Typography";
 import "./scss/blog.scss";
 import Not_Image from "./img/image.png";
 
+
+
+
 interface PostProp {
   id: number;
   title: {
@@ -24,7 +27,11 @@ interface PostProp {
 }
 
 export default async function Blog_page() {
-  const res = await fetch(`${process.env.BOOKS_BASE_URL}`, {
+  
+  const ENDPOINT = "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/posts"
+
+
+  const res = await fetch(ENDPOINT, {
     cache: "no-store",
   });
   // console.log(`res: ${res.status}`);
@@ -33,10 +40,6 @@ export default async function Blog_page() {
 
   return (
     <>
-      <div className="coment_type">
-        <p>RestAPIを使ったブログ表示に挑戦。 </p>
-        <p>また、各ページまでも同様に再現する(目標)</p>
-      </div>
 
       <ul className="news_area">
         {posts.map((post: PostProp) => (
@@ -53,8 +56,6 @@ export default async function Blog_page() {
                   <Typography gutterBottom variant="h5" component="div">
                     {post.title.rendered}
                   </Typography>
-
-                  {/* 抜粋内容のみ取得 */}
                   <div
                     dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
                   />
