@@ -11,6 +11,7 @@ import "@/app/Blog/scss/blog.scss";
 import Not_Image from "@/app/Blog/img/image.png";
 
 
+export const dynamicParams = true
 
 
 interface PostProp {
