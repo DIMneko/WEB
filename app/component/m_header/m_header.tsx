@@ -102,7 +102,7 @@ const M_Header = ({ site_title }: MHeaderProp) => {
       <header className="Mneko_header">
         <div className="Mneko_inner">
           <h2>
-            <a href="/">{site_title}</a>
+            <a href="${process.env.NEXT_PUBLIC_BASE_URL}/">{site_title}</a>
           </h2>
 
           <p>
