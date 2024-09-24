@@ -1,17 +1,9 @@
-import Card from "@mui/material/Card";
-import CardActionArea from "@mui/material/CardActionArea";
 
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-
-// import Image from "next/image";
-import Typography from "@mui/material/Typography";
 
 import "@/app/Blog/scss/blog.scss";
-import Not_Image from "@/app/Blog/img/image.png";
 
 
-export const dynamicParams = true
+
 
 
 interface PostProp {
@@ -27,45 +19,31 @@ interface PostProp {
   };
 }
 
-export default async function Blog_page() {
-  
+
+async function getPosts() {
   const ENDPOINT = "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/posts"
+  const res = await fetch(ENDPOINT)
+  const data = await res.json()
+  return data
+}
 
 
-  const res = await fetch(ENDPOINT, {
-    cache: "no-store",
-  });
-  // console.log(`res: ${res.status}`);
-  const posts = await res.json();
-  // console.log(`posts: ${posts}`);
 
+export default async function Blog_page() {
+
+  const posts = await getPosts()
+
+
+  
   return (
     <>
+    {posts.map((post:PostProp)=>(
+      <div key={post.id}>
+        <h3>{post.title.rendered}</h3>
 
-      <ul className="news_area">
-        {posts.map((post: PostProp) => (
-          <Card className="post_archive" key={post.id}>
-            <CardActionArea>
-              <a href={`${process.env.NEXT_PUBLIC_BASE_URL}/Blog/${post.id}`}>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image={Not_Image.src}
-                  alt="NotImage"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {post.title.rendered}
-                  </Typography>
-                  <div
-                    dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
-                  />
-                </CardContent>
-              </a>
-            </CardActionArea>
-          </Card>
-        ))}
-      </ul>
+      </div>
+    ))}
     </>
   );
 }
+
