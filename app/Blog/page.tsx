@@ -25,8 +25,7 @@ interface PostProp {
 }
 
 async function getPosts() {
-  const ENDPOINT =
-    "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/posts";
+  const ENDPOINT = `${process.env.BOOKS_BASE_URL}`;
   const res = await fetch(ENDPOINT, {
     cache: "force-cache",
   });
