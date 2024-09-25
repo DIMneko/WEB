@@ -64,3 +64,42 @@
         }
     }
 }
+
+
+.books_achive {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 1em;
+    gap: 1em;
+
+    article {
+        width: calc((100% / 3) - 1em);
+        figure {
+            position: relative;
+
+            figcaption {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                box-sizing: border-box;
+                padding: 0.2em;
+                background-color: rgba(255, 255, 255, 0.7);
+                font-weight: bold;
+                letter-spacing: 0.02em;
+            }
+        }
+
+        a {
+            background: #333;
+            padding: 0.2em 1.6em;
+            display: block;
+            margin: 1em auto 0;
+            width: max-content;
+            color: #fff;
+            letter-spacing: 0.05em;
+            border-radius: 0.3em;
+        }
+    }
+
+}

@@ -1,0 +1,98 @@
+{
+  "id": 14,
+  "date": "2024-09-18T16:46:15",
+  "date_gmt": "2024-09-18T07:46:15",
+  "guid": { "rendered": "http://mneko0904.cloudfree.jp/owner/books/?p=14" },
+  "modified": "2024-09-20T08:49:10",
+  "modified_gmt": "2024-09-19T23:49:10",
+  "slug": "next-js%e3%81%ae%e3%81%af%e3%81%98%e3%82%81%e6%96%b9",
+  "status": "publish",
+  "type": "post",
+  "link": "http://mneko0904.cloudfree.jp/owner/books/2024/09/18/next-js%e3%81%ae%e3%81%af%e3%81%98%e3%82%81%e6%96%b9/",
+  "title": { "rendered": "Next.js\u306e\u306f\u3058\u3081\u65b9" },
+  "content": {
+    "rendered": "\n<p>\u3053\u306e\u8a18\u8ff0\u306f\u3001WEB\u30d7\u30ed\u30b0\u30e9\u30df\u30f3\u30b0\u5b66\u7fd2\u306b\u304a\u3051\u308b\u6280\u8853\u7684\u306a\u5099\u5fd8\u9332\u306b\u306a\u308a\u307e\u3059\u3002\u305d\u306e\u305f\u3081\u77e5\u8b58\u4e0d\u8db3\u306a\u70b9\u3084\u3001\u8aac\u660e\u306b\u8aa4\u308a\u304c\u3042\u308b\u3068\u3044\u3046\u524d\u63d0\u3067\u306e\u8a18\u8ff0\u3068\u601d\u3063\u3066\u307f\u3066\u304f\u3060\u3055\u3044\u3002</p>\n\n\n\n<p>Next.js\u3092\u59cb\u3081\u308b\u306b\u306f\u5f53\u305f\u3063\u3066\u3001\u3042\u3089\u304b\u3058\u3081\u81ea\u8eab\u306e\u30d1\u30bd\u30b3\u30f3\u74b0\u5883\u306b\u7528\u610f\u3057\u3066\u304a\u304f\u3082\u306e\u304c\u3042\u308a\u307e\u3059\u3002Node.js\u3068Git\u3001\uff12\u3064\u306e\u30a2\u30d7\u30ea\u30b1\u30fc\u30b7\u30e7\u30f3\u3092\u4e8b\u524d\u306b\u30d1\u30bd\u30b3\u30f3\u306b\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u3057\u3066\u304a\u304d\u307e\u3057\u3087\u3046\u3002</p>\n\n\n\n<p>\u73fe\u5728\u3053\u306eNext.js\u3092\u6271\u3046\u306b\u3042\u3063\u305f\u3066\u4f7f\u7528\u3057\u3066\u3044\u308b\u30d0\u30fc\u30b8\u30e7\u30f3\u306f\u3001\u300cNode.js v22.2.0\u300d\u300cGit v2.39.1\u300d\u3092\u5229\u7528\u3057\u3066\u3044\u307e\u3059\u3002LST\uff08\u9577\u671f\u7684\u30b5\u30dd\u30fc\u30c8\uff09\u3092\u884c\u3063\u3066\u3044\u308b\u30d0\u30fc\u30b8\u30e7\u30f3\u3092\u5229\u7528\u3059\u308b\u3053\u3068\u3092\u304a\u52e7\u3081\u3057\u307e\u3059\u3002</p>\n\n\n\n<h2 class=\"wp-block-heading\">\u4e8b\u524d\u6e96\u5099\u304c\u51fa\u6765\u305f\u3089&#8230;</h2>\n\n\n\n<p>Node.js\u3092\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u3057\u305f\u6bb5\u968e\u3067Npm \u30b3\u30de\u30f3\u30c9\u306e\u5229\u7528\u304c\u53ef\u80fd\u306b\u306a\u308a\u307e\u3059\u3002<br>\u3053\u306e\u6a5f\u80fd\u3092\u4f7f\u3063\u3066\u3001Next.js\u3084\u305d\u306e\u307b\u304b\u306e\u30e2\u30b8\u30e5\u30fc\u30eb\u306e\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u3092\u884c\u3063\u3066\u3044\u304d\u307e\u3059\u3002powershell\u3067\u4f7f\u3046\u3053\u3068\u3082\u53ef\u80fd\u3067\u3059\u304c\u3001\u500b\u4eba\u7684\u306b\u3001Git\u30ea\u30dd\u30b8\u30c8\u30ea\u8a2d\u5b9a\u306a\u3069\u3067\u3001GitBash\u3092\u5229\u7528\u3059\u308b\u305f\u3081\u3001\u6bd4\u8f03\u7684\u4f7f\u3046\u30bf\u30fc\u30df\u30ca\u30eb\u3092\u5c11\u306a\u304f\u3057\u305f\u3044\u3053\u3068\u3082\u3042\u3063\u3066\u3001\u79c1\u306f\u3001GitBash\u3067\u3044\u308d\u3093\u306a\u64cd\u4f5c\u3092\u884c\u3063\u3066\u304a\u308a\u307e\u3059\u3002\u6163\u308c\u308b\u3068\u30bf\u30fc\u30df\u30ca\u30eb\u64cd\u4f5c\u306b\u8fd1\u3044\u305f\u3081\u4f55\u3068\u306a\u304f\u306e\u8a18\u8ff0\u3067\u52d5\u304b\u305b\u308b\u3088\u3046\u306b\u306a\u308b\u3068\u601d\u3044\u307e\u3059\u3002\uff08\u500b\u4eba\u5dee\u306b\u3088\u308b\uff09</p>\n\n\n\n<p>\u3068\u308a\u3042\u3048\u305a\u3001Next.js\u3092\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u3057\u3066\u3044\u304d\u307e\u3057\u3087\u3046\u3002\u4e0b\u8a18\u306e\u30b3\u30fc\u30c9\u3092GitBash\u3067\u3001\u4f5c\u6210\u3057\u305f\u30d5\u30a9\u30eb\u30c0\u5185\u3067\u5b9f\u884c\u3059\u308b\u3068Next.js\u304c\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u3055\u308c\u307e\u3059\u3002</p>\n\n\n\n<p>\u203bNode.js\u3068Git\u306f\u4e00\u822c\u7684\u306bC\u30c9\u30e9\u30a4\u30d6\u306b\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u3055\u308c\u3066\u3044\u308b\u305f\u3081\u3001\u5225\u306e\u30c9\u30e9\u30a4\u30d6\u3067\u5b9f\u884c\u3057\u3088\u3046\u3068\u3059\u308b\u3068\u30a8\u30e9\u30fc\u304c\u8d77\u304d\u307e\u3059\u306e\u3067\u3001\u6ce8\u610f\u3057\u3066\u304f\u3060\u3055\u3044\u3002\u307e\u305f\u3001\u30e2\u30b8\u30e5\u30fc\u30eb\u306e\u30c7\u30fc\u30bf\u3092\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u3057\u3066\u304f\u308b\u3068\u3044\u3046\u4e8b\u306f\u3001\u305d\u308c\u3060\u3051\u30c7\u30fc\u30bf\u3092\u4f7f\u3044\u307e\u3059\u306e\u3067\u3001C\u30c9\u30e9\u30a4\u30d6\u306e\u5bb9\u91cf\u304c\u30ae\u30ea\u30ae\u30ea\u306b\u306a\u308b\u3053\u3068\u3082\u3042\u308b\u305f\u3081\u4f59\u88d5\u3092\u6301\u3063\u3066\u304a\u304f\u3053\u3068\u3092\u304a\u52e7\u3081\u3057\u307e\u3059\u3002</p>\n\n\n\n<pre class=\"wp-block-code has-base-2-color has-contrast-background-color has-text-color has-background has-link-color wp-elements-7e326c827cf0f7f53f5bb3076b7237be\"><code>npx create-next-app@latest</code></pre>\n\n\n\n<p><a href=\"https://nextjs.org/docs/getting-started/installation\" target=\"_blank\" rel=\"noreferrer noopener\">\u516c\u5f0fDocs</a></p>\n\n\n\n<p></p>\n\n\n\n<p>\u82f1\u6587\u3067\u3059\u304c\u3001\u516c\u5f0f\u306b\u6cbf\u3063\u3066\u8a18\u8ff0\u3092\u9032\u3081\u308b\u3068\u5927\u4f53\u554f\u984c\u306f\u306a\u3044\u3068\u601d\u3044\u307e\u3059\u304c\u3001\u30bf\u30fc\u30df\u30ca\u30eb\u306e\u5b9f\u884c\u306f\u3001\u4f5c\u6210\u3057\u305f\u30d5\u30a9\u30eb\u30c0\uff08Nextjs\uff09\u3067\u884c\u3063\u3066\u304f\u3060\u3055\u3044\u3002</p>\n\n\n\n<pre class=\"wp-block-code has-base-2-color has-contrast-background-color has-text-color has-background has-link-color wp-elements-d033329e91e446bd9ebf8ba1d74b0b41\"><code>npm run dev</code></pre>\n\n\n\n<p>\u4e0a\u8a18\u306e\u8a18\u8ff0GitBash\u3067\u5b9f\u884c\u3059\u308b\u3053\u3068\u3067\u3001Local:3000\u306e\u4eee\u60f3\u74b0\u5883\u304c\u7acb\u3061\u4e0a\u304c\u308a\u3001Next.js\u306e\u30c7\u30d5\u30a9\u30eb\u30c8\u30b5\u30a4\u30c8\u304c\u8868\u793a\u3055\u308c\u307e\u3059\u3002</p>\n\n\n\n<p></p>\n\n\n\n<h2 class=\"wp-block-heading\">\u30b3\u30fc\u30c7\u30a3\u30f3\u30b0\u7528\u306e\u4e8b\u524d\u6e96\u5099</h2>\n\n\n\n<p>HTML/CSS/JS/PHP\u306a\u3069\u306f\u3001\u3068\u308a\u3042\u3048\u305a\u9032\u3081\u306a\u304c\u3089\u4ed5\u69d8\u3092\u8ffd\u52a0\u3057\u3066\u3044\u304f\u3053\u3068\u304c\u3067\u304d\u307e\u3059\u304c\u3001Next.js\u3067\u306f\u3042\u3089\u304b\u3058\u3081\u30ef\u30fc\u30af\u30b9\u30da\u30fc\u30b9\u5185\u306e\u30eb\u30fc\u30eb\u3084\u6821\u95b2\u30e2\u30b8\u30e5\u30fc\u30eb\u3001\u30c6\u30b9\u30c8\u30e2\u30b8\u30e5\u30fc\u30eb\u3001Git\u30ea\u30dd\u30b8\u30c8\u30ea\u8a2d\u5b9a\u306a\u3069\u306e\u4e8b\u524d\u6e96\u5099\u3092\u884c\u3063\u3066\u304a\u304f\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059\u3002</p>\n\n\n\n<p>\u3042\u304f\u307e\u3067\u3001\u4eba\u70ba\u7684\u4e0d\u5177\u5408\u3084\u30d7\u30ed\u30b0\u30e9\u30df\u30f3\u30b0\u306e\u8106\u5f31\u6027\u3092\u5c11\u3057\u3067\u3082\u6e1b\u3089\u3059\u76ee\u7684\u306b\u6d3b\u7528\u3059\u308b\u305f\u3081\u3001\u7df4\u7fd2\u6bb5\u968e\u3067\u306f\u304c\u3061\u304c\u3061\u306b\u8a2d\u5b9a\u3059\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u305b\u3093\u304c\u3001Eslint\u3084Prettire\u3001StoryBooks\u306a\u3069\u5165\u308c\u3066\u304a\u304f\u3068\u3088\u3044\u304b\u3082\u3067\u3059\u306d\u3002</p>\n\n\n\n<p>Next.js\u306e\u30d5\u30a9\u30eb\u30c0\u304c\u4f5c\u6210\u3055\u308c\u308b\u3068\u3001packege.json\u304c\u4f5c\u6210\u3055\u308c\u3001\u305d\u306e\u4e2d\u306b\u3069\u306e\u3088\u3046\u306a\u30e2\u30b8\u30e5\u30fc\u30eb\u3068\u9023\u643a\u3057\u3066\u3044\u308b\u304b\u30d0\u30fc\u30b8\u30e7\u30f3\u306f\u4f55\u3092\u4f7f\u3063\u3066\u3044\u308b\u304b\u8a18\u8f09\u3055\u308c\u3066\u3044\u307e\u3059\u3002\u8907\u6570\u4eba\u3067\u74b0\u5883\u3092\u5408\u308f\u305b\u305f\u3044\u5834\u5408\u306f\u305d\u3061\u3089\u3092\u53c2\u8003\u306b\u3059\u308b\u3068\u3088\u3044\u3067\u3059\u3002</p>\n\n\n\n<p></p>\n\n\n\n<p>\u4eca\u6271\u3063\u3066\u3044\u308b\u74b0\u5883\u306epackege.json\u3092\u53c2\u8003\u307e\u3067</p>\n\n\n\n<pre class=\"wp-block-code has-base-2-color has-contrast-background-color has-text-color has-background has-link-color wp-elements-3479a1f600d6f714b5011bd48cda62a5\"><code>{\r\n  \"name\": \"sample\",\r\n  \"version\": \"0.1.0\",\r\n  \"private\": true,\r\n  \"scripts\": {\r\n    \"dev\": \"next dev\",\r\n    \"build\": \"next build\",\r\n    \"start\": \"next start\",\r\n    \"lint\": \"next lint\",\r\n    \"lint:style\": \"stylelint '**/*.{css,scss,sass}'\",\r\n    \"lint:style:fix\": \"stylelint --fix '**/*.{css,scss,sass}'\",\r\n    \"format\": \"prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'\",\r\n    \"storybook\": \"storybook dev -p 6006\",\r\n    \"build-storybook\": \"storybook build\"\r\n  },\r\n  \"dependencies\": {\r\n    \"@emotion/react\": \"^11.13.3\",\r\n    \"@emotion/styled\": \"^11.13.0\",\r\n    \"@mui/icons-material\": \"^6.1.0\",\r\n    \"@mui/material\": \"^6.1.0\",\r\n    \"dompurify\": \"^3.1.6\",\r\n    \"next\": \"14.2.11\",\r\n    \"react\": \"^18\",\r\n    \"react-dom\": \"^18\"\r\n  },\r\n  \"devDependencies\": {\r\n    \"@chromatic-com/storybook\": \"^1.9.0\",\r\n    \"@storybook/addon-essentials\": \"^8.3.0\",\r\n    \"@storybook/addon-interactions\": \"^8.3.0\",\r\n    \"@storybook/addon-links\": \"^8.3.0\",\r\n    \"@storybook/addon-onboarding\": \"^8.3.0\",\r\n    \"@storybook/blocks\": \"^8.3.0\",\r\n    \"@storybook/nextjs\": \"^8.3.0\",\r\n    \"@storybook/react\": \"^8.3.0\",\r\n    \"@storybook/test\": \"^8.3.0\",\r\n    \"@types/node\": \"^20\",\r\n    \"@types/react\": \"^18\",\r\n    \"@types/react-dom\": \"^18\",\r\n    \"eslint\": \"^8.57.0\",\r\n    \"eslint-config-next\": \"^14.2.11\",\r\n    \"eslint-config-prettier\": \"^9.1.0\",\r\n    \"eslint-plugin-storybook\": \"^0.8.0\",\r\n    \"postcss\": \"^8\",\r\n    \"prettier\": \"^3.3.3\",\r\n    \"sass\": \"^1.78.0\",\r\n    \"storybook\": \"^8.3.0\",\r\n    \"stylelint\": \"^16.9.0\",\r\n    \"stylelint-config-recess-order\": \"^5.1.0\",\r\n    \"stylelint-config-recommended-scss\": \"^14.1.0\",\r\n    \"tailwindcss\": \"^3.4.1\",\r\n    \"typescript\": \"^5\"\r\n  }\r\n}\r\n</code></pre>\n\n\n\n<h2 class=\"wp-block-heading\">\u307e\u3068\u3081</h2>\n\n\n\n<p>Node.js\u3084Git\u306e\u30a2\u30d7\u30ea\u30b1\u30fc\u30b7\u30e7\u30f3\u304c\u5fc5\u8981\u3067\u3001Next.js\u3092\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u3057\u305f\u3089\u3053\u306e\u6642\u70b9\u3067Next.js\u3092\u6d3b\u7528\u3059\u308b\u3053\u3068\u304c\u53ef\u80fd\u3067\u3059\u3002\u3057\u304b\u3057\u3001\u5b9f\u969b\u306b\u30b3\u30fc\u30c9\u3092\u66f8\u304f\u305f\u3081\u306b\u306f\u5229\u7528\u76ee\u7684\u306b\u5fdc\u3058\u305f\u30e2\u30b8\u30e5\u30fc\u30eb\u3084\u30eb\u30fc\u30eb\u306e\u8a2d\u5b9a\u306a\u3069\u3092\u884c\u3063\u3066\u304a\u304f\u5fc5\u8981\u304c\u3042\u308b\u305f\u3081\u3001Next.js\u3092\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u304c\u7d42\u308f\u3063\u305f\u3089\u307e\u305a\u306f\u3001\u6700\u4f4e\u9650\u306e\u8a2d\u5b9a\u3092\u884c\u3046\u3068\u899a\u3048\u3066\u304a\u304d\u307e\u3057\u3087\u3046\u3002</p>\n\n\n\n<h2 class=\"wp-block-heading\">\u4f59\u8ac7</h2>\n\n\n\n<p>\u3061\u306a\u307f\u306b\u3001\u79c1\u306f\u3001Tailwind.css\u306f\u3042\u307e\u308a\u899a\u3048\u3066\u3044\u306a\u3044\u305f\u3081\u6614\u304b\u3089\u6163\u308c\u3066\u3044\u308bSCSS\u306e\u8a18\u8ff0\u3092\u9593\u306b\u631f\u307f\u306a\u304c\u3089\u3061\u3087\u3044\u3061\u3087\u3044Tailwind\u3092\u4f7f\u3046\u611f\u3058\u306b\u3057\u3066\u3044\u308b\u305f\u3081\u3001\u4e0b\u8a18\u306e\u8a18\u8ff0\u3067\u4e8b\u524d\u306b\u8ffd\u52a0\u3057\u3066\u304a\u308a\u307e\u3059\u3002</p>\n\n\n\n<pre class=\"wp-block-code has-base-2-color has-contrast-background-color has-text-color has-background has-link-color wp-elements-b82c3f5cbcc8d36770ff11dd130012dc\"><code>npm i -D sass\r\nnpm i -D stylelint stylelint-config-recess-order stylelint-config-recommended-scss</code></pre>\n\n\n\n<p>-D\u306f\u3053\u306e\u30d5\u30a9\u30eb\u30c0\u5185\u306e\u307f\u9069\u7528\u3059\u308b\u3068\u3044\u3046\u8a2d\u5b9a\u306a\u305f\u3081\u3088\u308a\u5bb9\u91cf\u3092\u98df\u3044\u307e\u3059\u3002</p>\n\n\n\n<p>\u9762\u5012\u306a\u306e\u304c\u3001StyleLint\uff08SCSS\u7528\u306e\u6821\u95b2\u30c4\u30fc\u30eb\uff09\u306e\u8a2d\u5b9a\u3092\u884c\u3046\u5fc5\u8981\u304c\u3042\u308a\u3001\u30d7\u30ed\u30b8\u30a7\u30af\u30c8\u306e\u76f4\u4e0b\u306b\u300c.stylelintrc.js\u300d\u3092\u8ffd\u52a0\u3057\u3066\u3001\u3061\u3087\u3063\u3068\u3057\u305f\u30eb\u30fc\u30eb\u3092\u8ffd\u52a0\u3057\u3066\u3044\u307e\u3059\u3002</p>\n\n\n\n<pre class=\"wp-block-code has-base-2-color has-contrast-background-color has-text-color has-background has-link-color wp-elements-6ce9a695c0417fe921d03e2aaee1efa2\"><code>module.exports = {\r\n  extends: &#91;\r\n    \"stylelint-config-recess-order\",\r\n    \"stylelint-config-recommended-scss\",\r\n  ],\r\n  rules: {\r\n    // ::before, ::after\u306e\u30b3\u30ed\u30f3\u30922\u3064\u306b\u3059\u308b\r\n    \"selector-pseudo-element-colon-notation\": \"double\",\r\n    // \u30af\u30e9\u30b9\u540d\u3067\u30a2\u30f3\u30d1\u30b5\u30f3\u30c9\uff08&amp;\uff09\u306f\u7981\u6b62\uff08&amp;:hover\u306a\u3069\u306fOK\uff09\r\n    \"scss/selector-no-union-class-name\": true,\r\r\n  },\r\n  // \u7121\u7406\u3084\u308a\u3067\u3059\u304c\u3001@Tailwind\u304c\u7d10\u3065\u3044\u3066\u3044\u308bglobals.css\u306f\u9664\u5916\r\n  // \u305d\u3093\u305f\u3081\u3001Scss\u3084css\u304c\u5225\u306b\u7528\u610f\u304c\u5fc5\u8981\r\n  ignoreFiles: &#91;\"**/node_modules/**\", \"**/globals.css\"],\r\n};\r\n</code></pre>\n\n\n\n<p>\u6b63\u76f4\u5168\u90e8\u306e\u7406\u89e3\u306f\u3057\u3066\u3044\u306a\u3044\u3067\u3059\u304c\u3001ignoreFiles\u306f\u3001\u8b58\u5225\u3057\u306a\u3044\u7b87\u6240\u306e\u3053\u3068\u307f\u305f\u3044\u3067\u3059\u306e\u3067\u3001node_modules\u4ee5\u5916\u306b\u3082\u3046\u4e00\u3064\u3001Next.js\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u6642\u306btailwind\u3092\u7d10\u3065\u3051\u3066\u3044\u308bglobals.css\u3082\u7121\u8996\u3059\u308b\u3088\u3046\u306b\u8a18\u8ff0\u3057\u3066\u3044\u307e\u3059\u3002</p>\n\n\n\n<p>eslint\u3082\u6821\u95b2\u30c4\u30fc\u30eb\u306a\u306e\u3067\u3001\u30a8\u30e9\u30fc\u5410\u304d\u51fa\u3059\u5834\u5408\u306f\u3001ignore\u306e\u7b87\u6240\u306b\u5165\u308c\u308b\u304b\u3001rules\u306e\u4e2d\u306b\u8a18\u8ff0\u3067false\u3068\u3059\u308b\u304b\u304a\u597d\u307f\u3067\u8a2d\u5b9a\u3057\u3066\u307f\u3066\u304f\u3060\u3055\u3044\u3002\u3042\u3093\u307e\u308a\u3053\u3046\u3044\u3063\u305f\u3068\u3053\u308d\u3092\u89e6\u308a\u305f\u304f\u306a\u3044\u306e\u3067\u3059\u304c\u3001\u89e6\u3063\u305f\u65b9\u304c\u5b66\u7fd2\u306e\u5411\u4e0a\u306b\u3082\u306a\u308a\u307e\u3059\u306e\u3067\u7a4d\u6975\u7684\u306b\u30aa\u30ea\u30b8\u30ca\u30eb\u306e\u8a2d\u5b9a\u3092\u5165\u308c\u3066\u3044\u304d\u307e\u3057\u3087\u3046\u3002</p>\n",
+    "protected": false
+  },
+  "excerpt": {
+    "rendered": "<p>\u3053\u306e\u8a18\u8ff0\u306f\u3001WEB\u30d7\u30ed\u30b0\u30e9\u30df\u30f3\u30b0\u5b66\u7fd2\u306b\u304a\u3051\u308b\u6280\u8853\u7684\u306a\u5099\u5fd8\u9332\u306b\u306a\u308a\u307e\u3059\u3002\u305d\u306e\u305f\u3081\u77e5\u8b58\u4e0d\u8db3\u306a\u70b9\u3084\u3001\u8aac\u660e\u306b\u8aa4\u308a\u304c\u3042\u308b\u3068\u3044\u3046\u524d\u63d0\u3067\u306e\u8a18\u8ff0\u3068\u601d\u3063\u3066\u307f\u3066\u304f\u3060\u3055\u3044\u3002 Next.js\u3092\u59cb\u3081\u308b\u306b\u306f\u5f53\u305f\u3063\u3066\u3001\u3042\u3089\u304b\u3058\u3081\u81ea\u8eab\u306e\u30d1\u30bd\u30b3\u30f3\u74b0\u5883\u306b\u7528 [&hellip;]</p>\n",
+    "protected": false
+  },
+  "author": 1,
+  "featured_media": 26,
+  "comment_status": "open",
+  "ping_status": "open",
+  "sticky": false,
+  "template": "",
+  "format": "standard",
+  "meta": { "footnotes": "" },
+  "categories": [1],
+  "tags": [],
+  "_links": {
+    "self": [
+      {
+        "href": "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/posts/14"
+      }
+    ],
+    "collection": [
+      {
+        "href": "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/posts"
+      }
+    ],
+    "about": [
+      {
+        "href": "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/types/post"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/users/1"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/comments?post=14"
+      }
+    ],
+    "version-history": [
+      {
+        "count": 5,
+        "href": "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/posts/14/revisions"
+      }
+    ],
+    "predecessor-version": [
+      {
+        "id": 20,
+        "href": "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/posts/14/revisions/20"
+      }
+    ],
+    "wp:featuredmedia": [
+      {
+        "embeddable": true,
+        "href": "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/media/26"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/media?parent=14"
+      }
+    ],
+    "wp:term": [
+      {
+        "taxonomy": "category",
+        "embeddable": true,
+        "href": "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/categories?post=14"
+      },
+      {
+        "taxonomy": "post_tag",
+        "embeddable": true,
+        "href": "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/tags?post=14"
+      }
+    ],
+    "curies": [
+      { "name": "wp", "href": "https://api.w.org/{rel}", "templated": true }
+    ]
+  }
+}

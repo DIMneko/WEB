@@ -4,7 +4,6 @@ import React from "react";
 const ENDPOINT =
   "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/posts";
 
-  
 interface Post {
   id: number;
   title: {

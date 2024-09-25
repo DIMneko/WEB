@@ -1,0 +1,119 @@
+{
+  "id": 26,
+  "date": "2024-09-20T08:48:28",
+  "date_gmt": "2024-09-19T23:48:28",
+  "guid": {
+    "rendered": "http://mneko0904.cloudfree.jp/owner/books/wp-content/uploads/sites/4/2024/09/code-1839406_1280.jpg"
+  },
+  "modified": "2024-09-20T08:48:28",
+  "modified_gmt": "2024-09-19T23:48:28",
+  "slug": "code-1839406_1280",
+  "status": "inherit",
+  "type": "attachment",
+  "link": "http://mneko0904.cloudfree.jp/owner/books/2024/09/19/%e8%87%aa%e7%a4%be%e7%94%a8%e3%82%a2%e3%83%97%e3%83%aa%e3%81%ae%e9%96%8b%e7%99%ba/code-1839406_1280/",
+  "title": { "rendered": "code-1839406_1280" },
+  "author": 1,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "template": "",
+  "meta": [],
+  "description": {
+    "rendered": "<p class=\"attachment\"><a href='http://mneko0904.cloudfree.jp/owner/books/wp-content/uploads/sites/4/2024/09/code-1839406_1280.jpg'><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"200\" src=\"http://mneko0904.cloudfree.jp/owner/books/wp-content/uploads/sites/4/2024/09/code-1839406_1280-300x200.jpg\" class=\"attachment-medium size-medium\" alt=\"\" srcset=\"http://mneko0904.cloudfree.jp/owner/books/wp-content/uploads/sites/4/2024/09/code-1839406_1280-300x200.jpg 300w, http://mneko0904.cloudfree.jp/owner/books/wp-content/uploads/sites/4/2024/09/code-1839406_1280-1024x683.jpg 1024w, http://mneko0904.cloudfree.jp/owner/books/wp-content/uploads/sites/4/2024/09/code-1839406_1280-768x512.jpg 768w, http://mneko0904.cloudfree.jp/owner/books/wp-content/uploads/sites/4/2024/09/code-1839406_1280.jpg 1280w\" sizes=\"(max-width: 300px) 100vw, 300px\" /></a></p>\n"
+  },
+  "caption": { "rendered": "" },
+  "alt_text": "",
+  "media_type": "image",
+  "mime_type": "image/jpeg",
+  "media_details": {
+    "width": 1280,
+    "height": 854,
+    "file": "2024/09/code-1839406_1280.jpg",
+    "filesize": 222226,
+    "sizes": {
+      "medium": {
+        "file": "code-1839406_1280-300x200.jpg",
+        "width": 300,
+        "height": 200,
+        "filesize": 13567,
+        "mime_type": "image/jpeg",
+        "source_url": "http://mneko0904.cloudfree.jp/owner/books/wp-content/uploads/sites/4/2024/09/code-1839406_1280-300x200.jpg"
+      },
+      "large": {
+        "file": "code-1839406_1280-1024x683.jpg",
+        "width": 1024,
+        "height": 683,
+        "filesize": 107076,
+        "mime_type": "image/jpeg",
+        "source_url": "http://mneko0904.cloudfree.jp/owner/books/wp-content/uploads/sites/4/2024/09/code-1839406_1280-1024x683.jpg"
+      },
+      "thumbnail": {
+        "file": "code-1839406_1280-150x150.jpg",
+        "width": 150,
+        "height": 150,
+        "filesize": 7061,
+        "mime_type": "image/jpeg",
+        "source_url": "http://mneko0904.cloudfree.jp/owner/books/wp-content/uploads/sites/4/2024/09/code-1839406_1280-150x150.jpg"
+      },
+      "medium_large": {
+        "file": "code-1839406_1280-768x512.jpg",
+        "width": 768,
+        "height": 512,
+        "filesize": 61194,
+        "mime_type": "image/jpeg",
+        "source_url": "http://mneko0904.cloudfree.jp/owner/books/wp-content/uploads/sites/4/2024/09/code-1839406_1280-768x512.jpg"
+      },
+      "full": {
+        "file": "code-1839406_1280.jpg",
+        "width": 1280,
+        "height": 854,
+        "mime_type": "image/jpeg",
+        "source_url": "http://mneko0904.cloudfree.jp/owner/books/wp-content/uploads/sites/4/2024/09/code-1839406_1280.jpg"
+      }
+    },
+    "image_meta": {
+      "aperture": "0",
+      "credit": "",
+      "camera": "",
+      "caption": "",
+      "created_timestamp": "0",
+      "copyright": "",
+      "focal_length": "0",
+      "iso": "0",
+      "shutter_speed": "0",
+      "title": "",
+      "orientation": "0",
+      "keywords": []
+    }
+  },
+  "post": 22,
+  "source_url": "http://mneko0904.cloudfree.jp/owner/books/wp-content/uploads/sites/4/2024/09/code-1839406_1280.jpg",
+  "_links": {
+    "self": [
+      {
+        "href": "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/media/26"
+      }
+    ],
+    "collection": [
+      {
+        "href": "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/media"
+      }
+    ],
+    "about": [
+      {
+        "href": "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/types/attachment"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/users/1"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/comments?post=26"
+      }
+    ]
+  }
+}

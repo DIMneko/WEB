@@ -26,142 +26,140 @@ import G_item025 from "./img/g_items025.png";
 import G_item026 from "./img/g_items026.png";
 import G_item027 from "./img/g_items027.png";
 
-
 export const DemoGallerys = [
   {
     id: 1,
     label: "ラベル名",
     URL: G_item001.src,
-},
-{
+  },
+  {
     id: 2,
     label: "ラベル名",
     URL: G_item002.src,
-},
-{
+  },
+  {
     id: 3,
     label: "ラベル名",
     URL: G_item003.src,
-},
-{
+  },
+  {
     id: 4,
     label: "ラベル名",
     URL: G_item004.src,
-},
-{
+  },
+  {
     id: 5,
     label: "ラベル名",
     URL: G_item005.src,
-},
-{
+  },
+  {
     id: 6,
     label: "ラベル名",
     URL: G_item006.src,
-},
-{
+  },
+  {
     id: 7,
     label: "ラベル名",
     URL: G_item007.src,
-},
-{
+  },
+  {
     id: 8,
     label: "ラベル名",
     URL: G_item008.src,
-},
-{
+  },
+  {
     id: 9,
     label: "ラベル名",
     URL: G_item009.src,
-},
-{
+  },
+  {
     id: 10,
     label: "ラベル名",
     URL: G_item010.src,
-},
-{
+  },
+  {
     id: 11,
     label: "ラベル名",
     URL: G_item011.src,
-},
-{
+  },
+  {
     id: 12,
     label: "ラベル名",
     URL: G_item012.src,
-},
-{
+  },
+  {
     id: 13,
     label: "ラベル名",
     URL: G_item013.src,
-},
-{
+  },
+  {
     id: 14,
     label: "ラベル名",
     URL: G_item014.src,
-},
-{
+  },
+  {
     id: 15,
     label: "ラベル名",
     URL: G_item015.src,
-},
-{
+  },
+  {
     id: 16,
     label: "ラベル名",
     URL: G_item016.src,
-},
-{
+  },
+  {
     id: 17,
     label: "ラベル名",
     URL: G_item017.src,
-},
-{
+  },
+  {
     id: 18,
     label: "ラベル名",
     URL: G_item018.src,
-},
-{
+  },
+  {
     id: 19,
     label: "ラベル名",
     URL: G_item019.src,
-},
-{
+  },
+  {
     id: 20,
     label: "ラベル名",
     URL: G_item020.src,
-},
-{
+  },
+  {
     id: 21,
     label: "ラベル名",
     URL: G_item021.src,
-},
-{
+  },
+  {
     id: 22,
     label: "ラベル名",
     URL: G_item022.src,
-},
-{
+  },
+  {
     id: 23,
     label: "ラベル名",
     URL: G_item023.src,
-},
-{
+  },
+  {
     id: 24,
     label: "ラベル名",
     URL: G_item024.src,
-},
-{
+  },
+  {
     id: 25,
     label: "ラベル名",
     URL: G_item025.src,
-},
-{
+  },
+  {
     id: 26,
     label: "ラベル名",
     URL: G_item026.src,
-},
-{
+  },
+  {
     id: 27,
     label: "ラベル名",
     URL: G_item027.src,
-}
-
+  },
 ];

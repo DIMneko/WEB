@@ -1,5 +1,9 @@
-import "@/app/Blog/scss/blog.scss";
+import Image from "next/image";
 import Link from "next/link";
+
+import NotImage from "@/app/Gallery/img/not_image.png";
+import "@/app/Blog/scss/blog.scss";
+import "@/app/Books/scss/Books.scss";
 
 interface PostProp {
   id: number;
@@ -24,18 +28,53 @@ async function getPosts() {
   return data;
 }
 
+// async function getImage() {
+//   const posts = await getPosts();
+//   while()
+
+//   const IMAGEPOINT =
+//     `http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/media/${id}`
+
+// }
+
 export default async function Book_page() {
   const posts = await getPosts();
+  let i: number = 0;
+  const DEMO = "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/media";
+
+  const imageBOX: string[] = [];
+
+  while (i < posts.length) {
+    const media_res = await fetch(`${DEMO}/${posts[i].featured_media}`);
+    if (!media_res.ok) {
+      imageBOX.push(NotImage.src);
+    } else {
+      const media_data = await media_res.json();
+      imageBOX.push(media_data.source_url);
+    }
+    i += 1;
+  }
+  console.log(imageBOX);
+
   return (
-    <>
-      {posts.map((post: PostProp) => (
-        <div key={post.id}>
-          <h3>{post.title.rendered}</h3>
+    <div className="books_achive">
+      {posts.map((post: PostProp, index: number) => (
+        <article key={post.id}>
+          <figure>
+            <Image
+              src={imageBOX[index]}
+              width={1000}
+              height={300}
+              loading="lazy"
+              alt="test"
+            />
+            <figcaption>{post.title.rendered}</figcaption>
+          </figure>
           <Link href={`${process.env.NEXT_PUBLIC_BASE_URL}/Blog/${post.id}`}>
             もっと見る
           </Link>
-        </div>
+        </article>
       ))}
-    </>
+    </div>
   );
 }
