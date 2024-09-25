@@ -2,7 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1em 0;
+    width: clamp(300px, 90%, 600px);
+    margin: 1em auto;
 
     button {
         padding: 1em;
