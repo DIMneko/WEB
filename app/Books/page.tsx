@@ -20,7 +20,7 @@ interface PostProp {
 
 async function getPosts() {
   const ENDPOINT =
-    "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/posts";
+    "https://hikaricreative.fool.jp/wp-json/wp/v2/posts?per_page=9";
   const res = await fetch(ENDPOINT, {
     cache: "force-cache",
   });
@@ -40,7 +40,7 @@ async function getPosts() {
 export default async function Book_page() {
   const posts = await getPosts();
   let i: number = 0;
-  const DEMO = "http://mneko0904.cloudfree.jp/owner/books/wp-json/wp/v2/media";
+  const DEMO = "https://hikaricreative.fool.jp/wp-json/wp/v2/media";
 
   const imageBOX: string[] = [];
 
@@ -70,7 +70,7 @@ export default async function Book_page() {
             />
             <figcaption>{post.title.rendered}</figcaption>
           </figure>
-          <Link href={`${process.env.NEXT_PUBLIC_BASE_URL}/Blog/${post.id}`}>
+          <Link href={`${process.env.NEXT_PUBLIC_BASE_URL}/Books/${post.id}`}>
             もっと見る
           </Link>
         </article>
