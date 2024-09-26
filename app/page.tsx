@@ -29,7 +29,6 @@ export default async function Home() {
       <h2 className="py-8 mx-auto w-[800px] text-center">HOME部分の内容は、ログイン後のダッシュボード画面から追加できるようにしたい。</h2>
       {posts.map((post: PostProp) => (
         <div key={post.id} className="w-[600px] mx-auto flex gap-4 py-2">
-          <p>{post.createddata}</p>
           <p>{post.title}</p>
         </div>
       ))}
