@@ -10,15 +10,20 @@ import "./scss/m_header.scss";
 import { M_menus } from "./m_menus";
 import ImageDefault from "@/app/assets/image/sample006.png";
 
+
+
 interface MHeaderProp {
   site_title: string;
 }
 
 const M_Header = ({ site_title }: MHeaderProp) => {
+
+
+
+
   // ----------------------------
   //   独自関数 / 定義
   // ----------------------------
-
   let flug = true;
   const Timer = 1000;
   const body =
@@ -80,22 +85,7 @@ const M_Header = ({ site_title }: MHeaderProp) => {
       console.error("not Target");
     }
   };
-  // マウスカーソルが外れた要素番号
-  // const HoverLinkOut = () => {
-  //   const Motion = [
-  //     {opacity: 1 },
-  //     {opacity: 0 },
-  //   ]
-  //   const Timing = {
-  //     duration: 1000,
-  //     fill: "forwards"
-  //   }
-  //   const fade_img = document.querySelector(".image_area img + img");
-  //   const fade_anime = test_img?.animate(Motion,Timing);
-  //   fade_anime.finished.then(()=>{
-  //     fade_img.remove();
-  //   });
-  // };
+
 
   return (
     <>
@@ -106,6 +96,7 @@ const M_Header = ({ site_title }: MHeaderProp) => {
           </h2>
 
           <p>
+            {}
             <a href="/auth/login">login</a>
           </p>
           <button onClick={OnClickEvent}>

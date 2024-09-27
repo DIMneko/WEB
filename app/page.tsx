@@ -1,12 +1,11 @@
 
+
 interface PostProp {
   id: number;
   title: string;
   content: string;
   createddata: Date;
-
 }
-
 async function getPosts() {
   const ENDPOINT = `${process.env.NEXT_PUBLIC_BASE_URL}/api/supabase`;
   const res = await fetch(ENDPOINT, {
@@ -16,13 +15,9 @@ async function getPosts() {
   return data.posts;
 }
 
-
-
 export default async function Home() {
 
   const posts = await getPosts();
-
-
 
   return (
     <main className="box-border py-12">
