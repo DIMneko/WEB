@@ -10,17 +10,11 @@ import "./scss/m_header.scss";
 import { M_menus } from "./m_menus";
 import ImageDefault from "@/app/assets/image/sample006.png";
 
-
-
 interface MHeaderProp {
   site_title: string;
 }
 
 const M_Header = ({ site_title }: MHeaderProp) => {
-
-
-
-
   // ----------------------------
   //   独自関数 / 定義
   // ----------------------------
@@ -85,7 +79,6 @@ const M_Header = ({ site_title }: MHeaderProp) => {
       console.error("not Target");
     }
   };
-
 
   return (
     <>

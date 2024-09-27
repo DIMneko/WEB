@@ -27,7 +27,9 @@ export default function M_Heder_BG() {
             />
           </figure>
         </div>
-      ) : (<div className="h-[200px]"></div>)}
+      ) : (
+        <div className="h-[200px]"></div>
+      )}
       {currentMenu ? <h3>{currentMenu.label}</h3> : <></>}
     </section>
   );
